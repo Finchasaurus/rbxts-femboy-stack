@@ -32,4 +32,7 @@ console.log("finishing up...");
 fs.rmdirSync(path.join(process.cwd(), repoName, ".git"), {recursive: true});
 fs.rmdirSync(path.join(process.cwd(), repoName, "bin"), {recursive: true});
 
+console.log(`Done!, opening ${repoName} in VSCode...`);
+runCommand(`code ${repoName}`);
+
 console.log(`Everything is ready!`);

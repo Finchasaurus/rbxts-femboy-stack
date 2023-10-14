@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 // This file is a CLI tool that will create a new project in the current directory.
+// https://github.com/Finchasaurus/rbxts-femboy-stack
 
 const {execSync} = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 const runCommand = command => {
     try {
@@ -26,12 +29,7 @@ const dependenciesInstalled = runCommand(installDependenciesCommand);
 if (!dependenciesInstalled) process.exit(-1);
 
 console.log("finishing up...");
-const removeGitFolderCommand = `cd ${repoName} && rm -rf .git`;
-const gitFolderRemoved = runCommand(removeGitFolderCommand);
-if (!gitFolderRemoved) process.exit(-1);
-
-const removeBinFolderCommand = `cd ${repoName} && rm -rf bin`;
-const binFolderRemoved = runCommand(removeBinFolderCommand);
-if (!binFolderRemoved) process.exit(-1);
+fs.rmdirSync(path.join(process.cwd(), repoName, ".git"), {recursive: true});
+fs.rmdirSync(path.join(process.cwd(), repoName, "bin"), {recursive: true});
 
 console.log(`Everything is ready!`);

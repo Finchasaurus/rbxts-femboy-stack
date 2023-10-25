@@ -1,6 +1,10 @@
 {
 	"version": 1,
 	"flameworkVersion": "1.0.0-beta.24",
-	"identifiers": {},
+	"identifiers": {
+		"rbxts-femboy-stack:out/client/controllers/Client.controller@ClientController": "client/controllers/Client.controller@ClientController",
+		"rbxts-femboy-stack:out/server/services/Server.service@ServerService": "server/services/Server.service@ServerService",
+		"rbxts-femboy-stack:out/server/classes/Class@Class": "server/classes/Class@Class"
+	},
 	"metadata": {}
 }

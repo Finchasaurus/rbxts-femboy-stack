@@ -36,6 +36,12 @@
 				"environmentRequires": {
 					"NODE_ENV": "development"
 				}
+			}, 
+			{
+				"transform": "rbxts-transformer-services"
+			},
+			{
+				"transform": "rbxts-transformer-setget"
 			}
 		],
 	}

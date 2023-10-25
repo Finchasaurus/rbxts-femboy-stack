@@ -45,6 +45,8 @@
 		"@rbxts/t": "^3.1.0",
 		"@rbxts/testez": "^0.4.2-ts.0",
 		"rbxts-transform-debug": "^2.2.0",
-		"rbxts-transform-env": "2.2.0"
+		"rbxts-transform-env": "2.2.0",
+		"rbxts-transformer-services": "^1.1.1",
+		"rbxts-transformer-setget": "^1.0.7"
 	}
 }
